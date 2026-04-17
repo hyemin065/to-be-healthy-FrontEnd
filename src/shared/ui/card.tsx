@@ -9,7 +9,7 @@ const CardRoot = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
     <div
       ref={ref}
       className={cn(
-        'h-35 relative flex w-40 flex-col gap-y-2 rounded-lg bg-white p-6',
+        'h-35 relative flex w-40 flex-col gap-y-2 rounded-lg bg-surface-background p-6',
         className
       )}
       {...props}
@@ -37,7 +37,7 @@ const CardContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
       ref={forwardedRef}
       className={cn(
         Typography.BODY_4_REGULAR,
-        'whitespace-pre-wrap text-gray-500',
+        'whitespace-pre-wrap text-text-token-secondary',
         className
       )}
       {...props}

@@ -42,7 +42,7 @@ const toastVariants = cva(
   {
     variants: {
       variant: {
-        default: 'border-none rounded-lg bg-gray-700 text-white',
+        default: 'border-none rounded-lg bg-text-token-primary text-text-token-inverse',
         destructive:
           'destructive group border-destructive bg-destructive text-destructive-foreground',
       },
@@ -62,6 +62,9 @@ const Toast = React.forwardRef<
     <ToastPrimitives.Root
       ref={ref}
       className={cn(toastVariants({ variant }), className)}
+      aria-live='polite'
+      aria-atomic='true'
+      role='status'
       {...props}
     />
   );

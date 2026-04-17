@@ -1,3 +1,4 @@
+import { zodResolver } from '@hookform/resolvers/zod';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -7,7 +8,7 @@ import { Typography } from '@/shared/mixin';
 import { Button, TextInput, useToast } from '@/shared/ui';
 import { cn } from '@/shared/utils';
 
-import { LoginForm } from '../model/types';
+import { LoginForm, loginSchema } from '../model/types';
 
 export const SignInForm = ({ memberType }: { memberType: 'trainer' | 'student' }) => {
   const router = useRouter();
@@ -19,7 +20,9 @@ export const SignInForm = ({ memberType }: { memberType: 'trainer' | 'student' }
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginForm>();
+  } = useForm<LoginForm>({
+    resolver: zodResolver(loginSchema),
+  });
 
   const onSubmit: SubmitHandler<LoginForm> = (credentials) => {
     mutate(

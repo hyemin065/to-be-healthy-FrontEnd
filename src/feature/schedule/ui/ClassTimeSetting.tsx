@@ -184,7 +184,7 @@ export const ClassTimeSetting = ({
                       }
                       className='timeSwiper'
                     />
-                    <div className='absolute left-4 right-4 top-1/2 h-9 -translate-y-1/2 rounded-lg bg-[#f2f3f5] text-2xl'></div>
+                    <div className='absolute left-4 right-4 top-1/2 h-9 -translate-y-1/2 rounded-lg bg-gray-100 text-2xl'></div>
                   </div>
                   <p
                     className={cn(
@@ -280,7 +280,7 @@ export const ClassTimeSetting = ({
                       }
                       className='timeSwiper'
                     />
-                    <div className='absolute left-4 right-4 top-1/2 h-9 -translate-y-1/2 rounded-lg bg-[#f2f3f5] text-2xl'></div>
+                    <div className='absolute left-4 right-4 top-1/2 h-9 -translate-y-1/2 rounded-lg bg-gray-100 text-2xl'></div>
                   </div>
                   <p
                     className={cn(

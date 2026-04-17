@@ -76,7 +76,7 @@ export const CourseCardContent = ({
 }: CourseCardContentProps) => {
   const progress = (completedLessonCnt / totalLessonCnt) * 100;
   const expirationTextColor =
-    completedLessonCnt === totalLessonCnt ? 'text-gray-300' : 'text-[#8EC7FF]';
+    completedLessonCnt === totalLessonCnt ? 'text-gray-300' : 'text-primary-200';
   return (
     <CardContent>
       <div className='px-6 pb-7'>

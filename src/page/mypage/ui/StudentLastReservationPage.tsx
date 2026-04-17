@@ -109,7 +109,7 @@ const StudentLastReservationPage = () => {
                             className={cn(
                               Typography.BODY_4_MEDIUM,
                               item.reservationStatus === 'COMPLETED'
-                                ? 'bg-[#e2f1ff] text-primary-500'
+                                ? 'bg-surface-secondary text-interactive-primary'
                                 : 'bg-gray-100 text-gray-700',
                               'ml-2 w-[52px] rounded-sm py-[2px] text-center '
                             )}>

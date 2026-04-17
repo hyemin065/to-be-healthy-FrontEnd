@@ -94,4 +94,66 @@ FSD 아키텍처를 적용하여 책임 크기 단위로 계층을 분리하고,
 
 FSD 아키텍처의 app layer의 컨셉과 Next.js app router의 기능 간의 개념적인 충돌이 있었지만, 프로젝트 특성에 맞도록 최적화하여 구성했습니다.
 
-###
+---
+
+## Design System
+
+### Design Token Architecture (SSOT)
+
+```
+Figma Variables → primitive.css → semantic.css → tailwind.config.js → Component (CVA)
+```
+
+3계층 토큰 시스템으로 Figma 디자인 변경이 코드 전체에 자동 반영됩니다.
+
+- **Primitive tokens**: 색상 28개, 타이포 17개, 스페이싱 12개, 반경 3개, 그림자 6개
+- **Semantic tokens**: surface 6, text 7, border 4, interactive 6, status 8, overlay 1
+- **상세 문서**: [Design Tokens](docs/design-tokens.md) | [Figma → Code Workflow](docs/figma-to-code-workflow.md)
+
+### Component Library
+
+| 카테고리 | 컴포넌트 | 패턴 |
+|---------|---------|------|
+| CVA Components | Button, Input, Badge, Chip, Typography, Progress, Sheet, Toast | CVA + forwardRef + VariantProps |
+| Compound Components | FormField, DataList, Layout, Dialog, Sheet, Tabs | Context / Object.assign + forwardRef |
+
+- **상세 문서**: [Component Library](docs/component-library.md)
+
+### Storybook
+
+```bash
+npm run storybook          # 로컬 (http://localhost:6006)
+npm run build-storybook    # 정적 빌드
+```
+
+Storybook 10 + `@storybook/nextjs-vite` 기반. Design Token 시각화, 컴포넌트 Controls/Actions, a11y 접근성 검사, Play function 인터랙션 테스트를 포함합니다.
+
+**addon 구성**:
+- `@storybook/addon-a11y` — WCAG 자동 검증
+- 코어 통합 essentials/interactions — Controls, Actions, Docs, Play function
+
+### Testing
+
+```bash
+npm test                   # Jest 단위 테스트 (53개)
+npm run test:e2e           # Playwright E2E (Storybook 기반)
+```
+
+- **단위 테스트**: 7개 컴포넌트 53개 케이스 (Button, Input, Chip, FormField, Progress, Typography, Badge)
+- **E2E 테스트**: Playwright + Storybook iframe 활용 — 키보드 접근성, ARIA 자동 주입 검증
+- **접근성**: ESLint `jsx-a11y/recommended` + Storybook a11y addon + 글로벌 `focus-visible` 스타일 + Skip navigation 링크
+
+### AI 활용
+
+Claude Code를 아키텍처 설계 파트너로 활용합니다. 토큰 체계 설계, CVA 패턴, 접근성 감사, 테스트 전략을 AI와 협업하되 모든 결정은 직접 검토합니다. [AI Workflow](docs/ai-workflow.md)
+
+### 포트폴리오 자료
+
+| 자료 | 위치 |
+|------|------|
+| Design Token 설계 | [docs/design-tokens.md](docs/design-tokens.md) |
+| Figma → Code 워크플로우 | [docs/figma-to-code-workflow.md](docs/figma-to-code-workflow.md) |
+| 컴포넌트 라이브러리 | [docs/component-library.md](docs/component-library.md) |
+| AI 활용 사례 | [docs/ai-workflow.md](docs/ai-workflow.md) |
+| Storybook 코드 | [src/shared/ui/__stories__/](src/shared/ui/__stories__/) |
+| 컴포넌트 코드 | [src/shared/ui/](src/shared/ui/) |

@@ -239,7 +239,7 @@ export const TrainerHomePage = () => {
                     }}>
                     <AddStudentDialog>
                       <button className='absolute right-0 top-0'>
-                        <IconPlus width={20} fill={'#CBCFD3'} />
+                        <IconPlus width={20} fill={'var(--color-gray-300)'} />
                       </button>
                     </AddStudentDialog>
                   </div>

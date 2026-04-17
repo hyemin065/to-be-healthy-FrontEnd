@@ -25,7 +25,7 @@ export function Toaster() {
           </Toast>
         );
       })}
-      <ToastViewport />
+      <ToastViewport aria-label='알림' />
     </ToastProvider>
   );
 }

@@ -249,7 +249,7 @@ const DotButton = ({ selected, ...props }: DotButton) => {
       type='button'
       {...props}
       className={cn(
-        'h-2 w-2 rounded-full bg-white opacity-50',
+        'h-2 w-2 rounded-full bg-surface-background opacity-50',
         selected && 'opacity-100'
       )}
     />

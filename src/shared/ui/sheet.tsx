@@ -22,7 +22,7 @@ const SheetOverlay = forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      'fixed inset-0 z-50 bg-overlay data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
       className
     )}
     {...props}
@@ -70,7 +70,7 @@ const SheetContent = forwardRef<
       className={cn(sheetVariants({ side, headerType }), 'pt-[48px]', className)}
       {...props}>
       {headerType === 'thumb' && (
-        <div className='absolute left-1/2 top-4 h-1 w-[44px] -translate-x-1/2 rounded-lg bg-gray-200' />
+        <div className='absolute left-1/2 top-4 h-1 w-[44px] -translate-x-1/2 rounded-lg bg-border-default' />
       )}
       {children}
       {headerType === 'close' && (

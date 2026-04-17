@@ -1,19 +1,38 @@
-export const HEADING_1 = 'text-[24px]/[130%] font-bold' as string;
-export const HEADING_2 = 'text-[22px]/[130%] font-bold' as string;
-export const HEADING_3 = 'text-[20px]/[130%] font-bold' as string;
-export const HEADING_4 = 'text-[18px]/[130%] font-bold' as string;
-export const HEADING_4_BOLD = 'text-[18px]/[130%] font-bold' as string;
-export const HEADING_4_SEMIBOLD = 'text-[18px]/[130%] font-semibold' as string;
-export const HEADING_5 = 'text-[13px]/[150%] font-semibold' as string;
-export const TITLE_1 = 'text-[16px]/[140%] font-bold' as string;
-export const TITLE_1_BOLD = 'text-[16px]/[140%] font-bold' as string;
-export const TITLE_1_SEMIBOLD = 'text-[16px]/[140%] font-semibold' as string;
-export const TITLE_2 = 'text-[15px]/[140%] font-semibold' as string;
-export const TITLE_3 = 'text-[14px]/[150%] font-semibold' as string;
-export const BODY_1 = 'text-[16px]/[150%] font-normal' as string;
-export const BODY_2 = 'text-[14px]/[150%] font-normal' as string;
-export const BODY_3 = 'text-[13px]/[150%] font-normal' as string;
-export const BODY_4 = 'text-[12px]/[150%] font-normal' as string;
-export const BODY_4_REGULAR = 'text-[12px]/[150%] font-normal' as string;
-export const BODY_4_MEDIUM = 'text-[12px]/[150%] font-medium' as string;
-export const NAV_TEXT = 'text-gray-700 text-center text-[10px] font-medium';
+export const HEADING_1 =
+  'text-[var(--font-size-5xl)]/[var(--line-height-tight)] font-bold' as string;
+export const HEADING_2 =
+  'text-[var(--font-size-4xl)]/[var(--line-height-tight)] font-bold' as string;
+export const HEADING_3 =
+  'text-[var(--font-size-3xl)]/[var(--line-height-tight)] font-bold' as string;
+export const HEADING_4 =
+  'text-[var(--font-size-2xl)]/[var(--line-height-tight)] font-bold' as string;
+export const HEADING_4_BOLD =
+  'text-[var(--font-size-2xl)]/[var(--line-height-tight)] font-bold' as string;
+export const HEADING_4_SEMIBOLD =
+  'text-[var(--font-size-2xl)]/[var(--line-height-tight)] font-semibold' as string;
+export const HEADING_5 =
+  'text-[var(--font-size-md)]/[var(--line-height-relaxed)] font-semibold' as string;
+export const TITLE_1 =
+  'text-[var(--font-size-xl)]/[var(--line-height-normal)] font-bold' as string;
+export const TITLE_1_BOLD =
+  'text-[var(--font-size-xl)]/[var(--line-height-normal)] font-bold' as string;
+export const TITLE_1_SEMIBOLD =
+  'text-[var(--font-size-xl)]/[var(--line-height-normal)] font-semibold' as string;
+export const TITLE_2 =
+  'text-[var(--font-size-lg)]/[var(--line-height-normal)] font-semibold' as string;
+export const TITLE_3 =
+  'text-[var(--font-size-base)]/[var(--line-height-relaxed)] font-semibold' as string;
+export const BODY_1 =
+  'text-[var(--font-size-xl)]/[var(--line-height-relaxed)] font-normal' as string;
+export const BODY_2 =
+  'text-[var(--font-size-base)]/[var(--line-height-relaxed)] font-normal' as string;
+export const BODY_3 =
+  'text-[var(--font-size-md)]/[var(--line-height-relaxed)] font-normal' as string;
+export const BODY_4 =
+  'text-[var(--font-size-sm)]/[var(--line-height-relaxed)] font-normal' as string;
+export const BODY_4_REGULAR =
+  'text-[var(--font-size-sm)]/[var(--line-height-relaxed)] font-normal' as string;
+export const BODY_4_MEDIUM =
+  'text-[var(--font-size-sm)]/[var(--line-height-relaxed)] font-medium' as string;
+export const NAV_TEXT =
+  'text-text-token-primary text-center text-[var(--font-size-xs)] font-medium';

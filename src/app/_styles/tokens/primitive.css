@@ -1,0 +1,101 @@
+/* =================================================================
+ * Primitive Design Tokens
+ * -----------------------------------------------------------------
+ * SSOT Layer 1 — raw values exported directly from Figma Variables.
+ * These tokens have NO semantic meaning. They are referenced only
+ * by semantic tokens (Layer 2) or, for backward-compat, via aliases
+ * in global.css.
+ * ================================================================= */
+
+:root {
+  /* ── Color: Blue (Brand Primary) ─────────────────────────────── */
+  --color-blue-50: #e2f1ff;
+  --color-blue-100: #badcff;
+  --color-blue-200: #8ec7ff;
+  --color-blue-300: #5fb1ff;
+  --color-blue-400: #3ba0ff;
+  --color-blue-500: #1990ff;
+  --color-blue-600: #1f82f0;
+  --color-blue-700: #206fdc;
+  --color-blue-800: #205eca;
+  --color-blue-900: #1f3eaa;
+
+  /* ── Color: Gray (Neutral) ───────────────────────────────────── */
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #f2f3f5;
+  --color-gray-200: #dee1e6;
+  --color-gray-300: #cbcfd3;
+  --color-gray-400: #a7a9ae;
+  --color-gray-500: #86888d;
+  --color-gray-600: #5f6165;
+  --color-gray-700: #4c4e52;
+  --color-gray-800: #2e3134;
+
+  /* ── Color: Red (Point / Danger) ─────────────────────────────── */
+  --color-red-500: #ff4668;
+
+  /* ── Color: Green (Success) ────────────────────────────────── */
+  --color-green-50: #f0fdf4;
+  --color-green-700: #15803d;
+
+  /* ── Color: Amber (Warning) ──────────────────────────────── */
+  --color-amber-50: #fffbeb;
+  --color-amber-700: #b45309;
+
+  /* ── Color: Red Surface ──────────────────────────────────── */
+  --color-red-50: #fef2f2;
+
+  /* ── Color: White / Black ────────────────────────────────────── */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* ── Typography: Font Size ───────────────────────────────────── */
+  --font-size-xs: 10px;
+  --font-size-sm: 12px;
+  --font-size-md: 13px;
+  --font-size-base: 14px;
+  --font-size-lg: 15px;
+  --font-size-xl: 16px;
+  --font-size-2xl: 18px;
+  --font-size-3xl: 20px;
+  --font-size-4xl: 22px;
+  --font-size-5xl: 24px;
+
+  /* ── Typography: Font Weight ─────────────────────────────────── */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ── Typography: Line Height ─────────────────────────────────── */
+  --line-height-tight: 130%;
+  --line-height-normal: 140%;
+  --line-height-relaxed: 150%;
+
+  /* ── Spacing ─────────────────────────────────────────────────── */
+  --spacing-1: 4px;
+  --spacing-2: 6px;
+  --spacing-3: 8px;
+  --spacing-4: 10px;
+  --spacing-5: 12px;
+  --spacing-6: 16px;
+  --spacing-7: 20px;
+  --spacing-8: 24px;
+  --spacing-9: 28px;
+  --spacing-10: 32px;
+  --spacing-11: 36px;
+  --spacing-12: 48px;
+
+  /* ── Border Radius ───────────────────────────────────────────── */
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+
+  /* ── Shadow ──────────────────────────────────────────────────── */
+  --shadow-sm: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0px 4px 12px 0px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);
+  --shadow-nav: 0px -2px 8px 0px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0px 4px 12px 0px rgba(0, 0, 0, 0.06);
+  --shadow-calendar: 0px 4px 8px 0px rgba(0, 0, 0, 0.04);
+}

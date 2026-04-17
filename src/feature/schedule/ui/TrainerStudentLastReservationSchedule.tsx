@@ -119,7 +119,7 @@ export const TrainerStudentLastReservationSchedule = ({ data }: Props) => {
                 className={cn(
                   Typography.BODY_4_MEDIUM,
                   data.reservationStatus === 'COMPLETED'
-                    ? 'bg-[#e2f1ff] text-primary-500'
+                    ? 'bg-surface-secondary text-interactive-primary'
                     : 'bg-gray-100 text-gray-700',
                   'ml-2 w-[52px] rounded-sm py-[2px] text-center '
                 )}>
@@ -157,7 +157,7 @@ export const TrainerStudentLastReservationSchedule = ({ data }: Props) => {
                 'h-12 w-full rounded-md',
                 data.reservationStatus === 'COMPLETED'
                   ? 'bg-gray-100 text-point'
-                  : 'bg-[#E2F1FF] text-primary-500'
+                  : 'bg-surface-secondary text-interactive-primary'
               )}
               onClick={() => toggleNoShowStatus(data.scheduleId, data.reservationStatus)}>
               {data.reservationStatus === 'COMPLETED' ? '미출석' : '출석'}

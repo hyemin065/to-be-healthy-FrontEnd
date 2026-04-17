@@ -31,7 +31,7 @@ export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
           className={cn(
             Typography.BODY_1,
             twSelector('placeholder', Typography.BODY_1),
-            'h-full w-full rounded-md border border-solid border-gray-200 p-6 text-gray-800 outline-none placeholder:text-gray-500 autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] focus:visible focus:border focus:border-primary-500',
+            'h-full w-full rounded-md border border-solid border-border-default p-6 text-text-token-primary outline-none placeholder:text-text-token-secondary autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)] focus:visible focus:border focus:border-primary-500',
             className
           )}
           {...props}

@@ -1,4 +1,4 @@
-import { Children, HTMLAttributes, isValidElement, ReactNode } from 'react';
+import { Children, forwardRef, HTMLAttributes, isValidElement, ReactNode } from 'react';
 
 import { LowercaseMemberType } from '@/entity/auth';
 import { cn } from '@/shared/utils';
@@ -40,36 +40,43 @@ export const Layout = ({ type, className, children, ...props }: LayoutProps) => 
   );
 };
 
-const Header = ({ children, className, ...props }: HTMLAttributes<HTMLDivElement>) => (
-  <header
-    className={cn(
-      'relative flex h-[56px] w-full flex-none items-center justify-between px-7 py-6',
-      className
-    )}
-    {...props}>
-    {children}
-  </header>
+const Header = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>(
+  ({ children, className, ...props }, ref) => (
+    <header
+      ref={ref}
+      role='banner'
+      className={cn(
+        'relative flex h-[56px] w-full flex-none items-center justify-between px-7 py-6',
+        className
+      )}
+      {...props}>
+      {children}
+    </header>
+  )
 );
 Header.displayName = 'Header';
 
-const Contents = ({ children, className, ...props }: HTMLAttributes<HTMLDivElement>) => (
-  <main
-    className={cn('h-full w-full flex-1 flex-shrink-0 overflow-y-auto', className)}
-    {...props}>
-    {children}
-  </main>
+const Contents = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>(
+  ({ children, className, id = 'main-content', ...props }, ref) => (
+    <main
+      ref={ref}
+      id={id}
+      className={cn('h-full w-full flex-1 flex-shrink-0 overflow-y-auto', className)}
+      {...props}>
+      {children}
+    </main>
+  )
 );
 Contents.displayName = 'Contents';
 
-const BottomArea = ({
-  children,
-  className,
-  ...props
-}: HTMLAttributes<HTMLDivElement>) => (
-  <footer className={cn('w-full p-7', className)} {...props}>
-    {children}
-  </footer>
+const BottomArea = forwardRef<HTMLElement, HTMLAttributes<HTMLElement>>(
+  ({ children, className, ...props }, ref) => (
+    <footer ref={ref} className={cn('w-full p-7', className)} {...props}>
+      {children}
+    </footer>
+  )
 );
+BottomArea.displayName = 'BottomArea';
 
 Layout.Header = Header;
 Layout.Contents = Contents;

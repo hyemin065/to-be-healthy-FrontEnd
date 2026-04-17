@@ -15,7 +15,9 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:@typescript-eslint/stylistic-type-checked"
+    "plugin:@typescript-eslint/stylistic-type-checked",
+    "plugin:storybook/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -24,9 +26,17 @@
     },
     "ecmaVersion": 12,
     "sourceType": "module",
-    "project": ["tsconfig.json"]
+    "project": [
+      "tsconfig.json"
+    ]
   },
-  "plugins": ["react", "@typescript-eslint", "prettier", "simple-import-sort"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort",
+    "jsx-a11y"
+  ],
   "rules": {
     "react/react-in-jsx-scope": "off", // import React from 'react' 안해도 되게 만들어줌.
     "simple-import-sort/imports": "error", // import 구문 순서 엉망이면 에러 냄.
